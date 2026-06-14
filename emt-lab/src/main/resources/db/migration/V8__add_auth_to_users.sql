@@ -1,0 +1,4 @@
+-- Users table with auth columns already created in V2_1
+-- alter table users add column username varchar(255) unique;
+-- alter table users add column password varchar(255);
+-- alter table users add column role varchar(255);

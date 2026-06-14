@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: emt-lab
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - emt-lab-postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  emt-lab-postgres-data:

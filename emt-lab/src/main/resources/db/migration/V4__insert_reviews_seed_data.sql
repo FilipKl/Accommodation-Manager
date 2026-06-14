@@ -1,0 +1,50 @@
+insert into reviews (created_at, updated_at, comment, grade, accommodation_id)
+values
+    (now(), now(), 'Great place, very cozy!', 5,
+     (select id from accommodations where name = 'Studio Skopje')),
+    (now(), now(), 'Nice view but a bit small.', 3,
+     (select id from accommodations where name = 'Studio Skopje')),
+    (now(), now(), 'Very clean and affordable.', 4,
+     (select id from accommodations where name = 'Studio Skopje')),
+
+    (now(), now(), 'Perfect mountain getaway!', 5,
+     (select id from accommodations where name = 'Mountain House Mavrovo')),
+    (now(), now(), 'Beautiful scenery, would come back.', 5,
+     (select id from accommodations where name = 'Mountain House Mavrovo')),
+    (now(), now(), 'A bit cold at night but overall great.', 4,
+     (select id from accommodations where name = 'Mountain House Mavrovo')),
+
+    (now(), now(), 'Modern and well located.', 4,
+     (select id from accommodations where name = 'Rome Apartment')),
+    (now(), now(), 'Walking distance to the Colosseum!', 5,
+     (select id from accommodations where name = 'Rome Apartment')),
+    (now(), now(), 'Nice apartment but parking was difficult.', 3,
+     (select id from accommodations where name = 'Rome Apartment')),
+
+    (now(), now(), 'Excellent service and rooms.', 5,
+     (select id from accommodations where name = 'Madrid Luxury Hotel')),
+    (now(), now(), 'Top notch facilities and staff.', 5,
+     (select id from accommodations where name = 'Madrid Luxury Hotel')),
+    (now(), now(), 'A bit pricey but worth every euro.', 4,
+     (select id from accommodations where name = 'Madrid Luxury Hotel')),
+
+    (now(), now(), 'Small but clean.', 3,
+     (select id from accommodations where name = 'Tokyo Guest Room')),
+    (now(), now(), 'Very authentic Japanese experience.', 5,
+     (select id from accommodations where name = 'Tokyo Guest Room')),
+    (now(), now(), 'Convenient location near the metro.', 4,
+     (select id from accommodations where name = 'Tokyo Guest Room')),
+
+    (now(), now(), 'Very run down, would not recommend.', 1,
+     (select id from accommodations where name = 'Motel Route 66')),
+    (now(), now(), 'Cheap but you get what you pay for.', 2,
+     (select id from accommodations where name = 'Motel Route 66')),
+    (now(), now(), 'Needs serious renovation.', 1,
+     (select id from accommodations where name = 'Motel Route 66')),
+
+    (now(), now(), 'Good value for money.', 4,
+     (select id from accommodations where name = 'LA Flat')),
+    (now(), now(), 'Great neighborhood, close to the beach.', 5,
+     (select id from accommodations where name = 'LA Flat')),
+    (now(), now(), 'Modern interior, very comfortable.', 4,
+     (select id from accommodations where name = 'LA Flat'));
